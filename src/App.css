@@ -1,38 +1,95 @@
+@font-face {
+  font-family: 'PoppinsRegular';
+  src: url('../public/fonts/Poppins-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'PoppinsMedium';
+  src: url('../public/fonts/Poppins-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'PoppinsBold';
+  src: url('../public/fonts/Poppins-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'BorelRegular';
+  src: url('../public/fonts/Borel-Regular.ttf');
+}
+
+:root {
+  --color-primary: #FB9302;
+  --color-primary-light: #fb930227;
+  --color-content-bg: #FAF9FB;
+  --color-secondary: #48329C;
+  --color-secondary-light: #79738f;
+  --color-text: #170d41;
+}
+
+.bold-24 {
+  font-family: 'PoppinsBold';
+  font-size: 24px;
+}
+
+.medium-16 {
+  font-family: 'PoppinsMedium';
+  font-size: 16px;
+}
+
+.medium-14 {
+  font-family: 'PoppinsMedium';
+  font-size: 14px;
+}
+
+.regular-16 {
+  font-family: 'PoppinsRegular';
+  font-size: 16px;
+}
+
+.regular-14 {
+  font-family: 'PoppinsRegular';
+  font-size: 14px;
+}
+
+.regular-12 {
+  font-family: 'PoppinsRegular';
+  font-size: 12px;
+}
+
+.logo {
+  font-family: 'BorelRegular';
+  font-size: 24px;
+  color: var(--color-primary);
+  margin-bottom: 16px;
+}
+
+.horizontal-divider {
+  width: 100%;
+  height: 1px;
+  background-color: #f4f4f4;
+  margin: 12px 0px;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  min-width: 100vw;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: var(--color-content-bg);
 }
 
-.App-link {
-  color: #61dafb;
+.content-container {
+  margin-left: 256px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.content {
+  max-width: 960px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+html,
+body {
+  padding: 0px;
+  margin: 0px;
 }

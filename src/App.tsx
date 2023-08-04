@@ -1,26 +1,42 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Drawer from './components/drawer/Drawer';
+import RecipeItem from './components/recipe-item/RecipeItem';
+import RecipeList from './components/recipe-list/RecipeList';
+import { BrowserRouter, Outlet, Route, Routes } from 'react-router-dom';
+import Layout from './components/Layout';
+import RecipeExplorer from './components/routes/recipe-explorer/RecipesExplorer';
+import RecipeByCategory from './components/routes/recipe-by-category/RecipeByCategory';
+import RecipeByArea from './components/routes/recipe-by-area/RecipeByArea';
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Layout />}>
+          <Route index element={<RecipeExplorer />} />
+          <Route path='/category/:name' element={<RecipeByCategory />} />
+          <Route path='/area/:name' element={<RecipeByArea />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  )
+
+  // return (
+  //   <div className="App">
+  //     <Drawer />
+  //     <div
+  //       className='content-container'>
+  //       <div
+  //         className='content'>
+  //         <Outlet />
+  //         {/* <RecipeList
+  //           recipes={mockRecipes} /> */}
+  //       </div>
+  //     </div>
+  //   </div>
+  // );
 }
 
 export default App;
