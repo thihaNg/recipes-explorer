@@ -8,6 +8,7 @@ import Layout from './components/Layout';
 import RecipeExplorer from './components/routes/recipe-explorer/RecipesExplorer';
 import RecipeByCategory from './components/routes/recipe-by-category/RecipeByCategory';
 import RecipeByArea from './components/routes/recipe-by-area/RecipeByArea';
+import RecipeDetail from './components/routes/recipe-detail/RecipeDetail';
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
           <Route path='/category/:name' element={<RecipeByCategory />} />
           <Route path='/area/:name' element={<RecipeByArea />} />
         </Route>
+        <Route path='/recipe/:recipeId' element={<RecipeDetail />} />
       </Routes>
     </BrowserRouter>
   )

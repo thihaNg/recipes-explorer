@@ -1,6 +1,8 @@
 import { useParams } from 'react-router-dom'
 import RecipeList from '../../recipe-list/RecipeList'
 import { useGetRecipesByArea } from '../../../api/useGetRecipesByArea'
+import LoadingScreen from '../../loading/LoadingScreen'
+import Styles from './RecipeByArea.module.css'
 
 const DEFAULT_AREA = 'American'
 
@@ -14,10 +16,18 @@ const RecipeByArea: React.FC = () => {
   } = useGetRecipesByArea(name ? name : DEFAULT_AREA)
 
   return (
-    <div>
-      <RecipeList
-        title={name ? name : DEFAULT_AREA}
-        recipes={recipes} />
+    <div
+      className={`${Styles.container}`}>
+      {
+        !isLoading &&
+        <RecipeList
+          title={name ? name : DEFAULT_AREA}
+          recipes={recipes} />
+      }
+      {
+        isLoading &&
+        <LoadingScreen />
+      }
     </div>
   )
 }

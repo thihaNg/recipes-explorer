@@ -12,10 +12,10 @@ export const mapRecipeRawToRecipe = (raw: RecipeRaw): Recipe => {
   if(raw.strCategory)
     tags.push(raw.strCategory)
 
-  // if(raw.strTags) {
-  //   console.log(raw.strTags, raw.strTags.split(','))
-  //   tags = tags.concat(raw.strTags.split(','))
-  // }
+  if(raw.strTags) {
+    console.log(raw.strTags, raw.strTags.split(','))
+    tags = tags.concat(raw.strTags.split(','))
+  }
 
   return ({
     id: raw.idMeal,

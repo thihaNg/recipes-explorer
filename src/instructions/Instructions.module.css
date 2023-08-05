@@ -1,0 +1,19 @@
+.row-container {
+  display: flex;
+  flex-direction: row;
+  padding: 8px 0px;
+}
+
+.index {
+  color: var(--color-secondary-light);
+}
+
+.label {
+  color: var(--color-text);
+  margin-left: 12px;
+}
+
+.instructions-container {
+  display: flex;
+  flex-direction: column;
+}

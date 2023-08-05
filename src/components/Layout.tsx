@@ -1,6 +1,5 @@
 import { Outlet } from "react-router-dom"
 import Drawer from "./drawer/Drawer"
-import RecipeList from "./recipe-list/RecipeList"
 
 const Layout: React.FC = () => {
   return (

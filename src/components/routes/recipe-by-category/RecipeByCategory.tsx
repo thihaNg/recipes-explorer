@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom'
 import Styles from './RecipeByCategory.module.css'
 import { useGetRecipesByCategory } from '../../../api/useGetRecipesByCategory'
 import RecipeList from '../../recipe-list/RecipeList'
+import LoadingScreen from '../../loading/LoadingScreen'
 
 const DEFAULT_CAT = 'Miscellaneous'
 
@@ -17,9 +18,16 @@ const RecipeByCategory: React.FC = () => {
   return (
     <div
       className={`${Styles.container}`}>
-      <RecipeList
-        title={name ? name : DEFAULT_CAT}
-        recipes={recipes} />
+      {
+        !isLoading &&
+        <RecipeList
+          title={name ? name : DEFAULT_CAT}
+          recipes={recipes} />
+      }
+      {
+        isLoading &&
+        <LoadingScreen />
+      }
     </div>
   )
 }

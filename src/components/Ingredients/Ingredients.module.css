@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+}
+
+.label {
+  color: var(--color-secondary-light);
+}
+
+.measurement {
+  color: var(--color-text);
+  margin-left: 12px;
+}
+
+.td, .th {
+  border: 1px solid #E4E4E7;
+  text-align: left;
+  padding: 16px;
+  border-radius: 6px;
+}
+
+.table {
+  width: 50%;
+  border-collapse: collapse;
+  height: fit-content;
+}
+
+@media(max-width: 600px) {
+  .table {
+    width: 100%;
+    margin-top: 32px;
+  }
+}
