@@ -6,11 +6,8 @@ const Layout: React.FC = () => {
     <div className="App">
       <Drawer />
       <div
-        className='content-container'>
-        <div
-          className='content'>
-          <Outlet />
-        </div>
+        className='content'>
+        <Outlet />
       </div>
     </div>
   )

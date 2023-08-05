@@ -38,12 +38,16 @@
   padding: 16px 8px;
   width: 256px;
   height: 100vh;
-  position: fixed;
-  left: 0;
-  top: 0;
+  flex-shrink: 0;
   overflow: auto;
   box-sizing: border-box;
   box-shadow: 1px 0px 0px 0px #E4E4E7;
+}
+
+@media(max-width: 1056px) {
+  .drawer-container {
+    display: none;
+  }
 }
 
 .expandable-item-container {

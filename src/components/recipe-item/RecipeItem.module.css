@@ -4,12 +4,18 @@
   padding: 12px;
   border-radius: 6px;
   background-color: white;
-  width: 240px;
+  width: 256px;
   border: 1px solid#E4E4E7;
   /* height: 300px; */
   cursor: pointer;
   box-sizing: border-box;
   position: relative;
+}
+
+@media(max-width: 600px) {
+  .container {
+    width: calc(100vw - 24px);
+  }
 }
 
 .container:hover {
