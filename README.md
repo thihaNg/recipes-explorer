@@ -3,7 +3,7 @@
 - Responsive design
 
 # Project URL
-https://recipes-explorer.vercel.app/
+[https://recipes-explorer.vercel.app/](https://recipes-explorer-q7bchisz9-thihang.vercel.app/)
 
 # Getting Started with Create React App
 
