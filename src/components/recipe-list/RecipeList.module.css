@@ -16,6 +16,8 @@
 .container > span {
   color: var(--color-secondary);
   padding: 24px 0px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media(max-width: 1300px) {

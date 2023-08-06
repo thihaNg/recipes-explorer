@@ -14,7 +14,8 @@ const Instructions: React.FC<Props> = ({
         className={`bold-16`}>Instructions</span>
       {
         instructions.map((instruction, index) => (
-          <InstructionRow 
+          <InstructionRow
+            key={index}
             label={instruction}
             index={index + 1}/>
         ))

@@ -5,7 +5,7 @@ import IconFavorite from '../../images/icon_favorite.svg'
 import IconCategory from '../../images/icon_category.svg'
 import IconArea from '../../images/icon_area.svg'
 import ExpandableDrawerItem from './ExpandableDrawerItem'
-import { useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import { DrawerContext } from './DrawerContext'
 import { useGetCategories } from '../../api/useGetCategories'
@@ -16,7 +16,21 @@ const LABEL_SEARCH = 'Search Recipes'
 const Drawer: React.FC = () => {
 
   const navigate = useNavigate()
-  const [selectedMenuItem, setSelectedMenuItem] = useState('Search Recipes')
+  const location = useLocation()
+
+  const getCurrentSelectedMenu = (): string => {
+    const currentPath = location.pathname ? location.pathname : '/'
+
+    if (currentPath.split('/').length >= 3) {
+      return currentPath.split('/')[2]
+    }
+
+    return LABEL_SEARCH
+  }
+
+  console.log('CurrentLocation', location, location.pathname, getCurrentSelectedMenu())
+
+  const [selectedMenuItem, setSelectedMenuItem] = useState(getCurrentSelectedMenu())
   const { categories } = useGetCategories()
   const { areas } = useGetAreas()
 
