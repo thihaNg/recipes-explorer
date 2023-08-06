@@ -1,6 +1,6 @@
 # TODO
-- Recipe detail page
-- Mobile responsive
+- Save recipe as favorite feature
+- Responsive design
 
 # Project URL
 https://recipes-explorer.vercel.app/
